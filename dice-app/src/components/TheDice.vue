@@ -1,6 +1,6 @@
 <template>
-    <div class="greetings">
-      <h1 class="green">{{ msg }}</h1>
+    <div class="dicebutton">
+        <h1>Roll me!</h1>
       <button @click="rollDice">Roll</button>
       <p v-if="result !== null">You rolled: {{ result }}</p>
     </div>
@@ -17,12 +17,15 @@
   const result = ref(null);
   
   const rollDice = () => {
-    // Generate a random number between 1 and 6
     result.value = Math.floor(Math.random() * 6) + 1;
   };
   </script>
   
   <style scoped>
+
+    body {
+        background-color: aqua;
+    }
   h1 {
     font-weight: 500;
     font-size: 2.6rem;
@@ -31,8 +34,8 @@
   }
   
   button {
-    margin-top: 10px;
-    padding: 5px 10px;
+    margin-top: 100px;
+    padding: 5px 30px;
     cursor: pointer;
   }
   
